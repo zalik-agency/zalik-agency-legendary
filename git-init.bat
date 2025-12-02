@@ -2,7 +2,7 @@
 git init
 
 # HTML-Datei hinzufügen (umbenennen zu index.html)
-copy zalik-agency.html index.html
+ren zalik-agency.html index.html
 
 # Commit erstellen
 git add .
