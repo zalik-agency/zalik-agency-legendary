@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zalik.Agency – Ihre Prozesse sind Ihr profitabelstes Kapital</title>
+    <meta name="description" content="Beweis in 90 Sekunden – nicht in 90 Tagen PowerPoint-Präsentationen. 383% ROI – belegt durch 10.000+ zufriedene Enterprise-Kunden.">
+    
+    <!-- Preconnect für Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Tiempos Headline Alternative: Crimson Pro für Autorität -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700;900&family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Codex Color System */
+            --bg-primary: #F0F9FF;
+            --primary: #0284C7;
+            --profit: #059669;
+            --accent-de: #4F46E5;
+            --warning: #DC2626;
+            --text: #0F172A;
+            --text-muted: #64748B;
+            --slate-50: #F8FAFC;
+            --slate-100: #F1F5F9;
+            --emerald-50: #ECFDF5;
+            --sky-50: #F0F9FF;
+            
+            /* Typography */
+            --font-display: 'Crimson Pro', serif;
+            --font-body: 'DM Sans', sans-serif;
+            --font-mono: 'Space Mono', monospace;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-primary);
+            color: var(--text);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        /* Quantum Flow Field Background Animation */
+        .quantum-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(2, 132, 199, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(5, 150, 105, 0.08) 0%, transparent 50%),
+                linear-gradient(135deg, #F0F9FF 0%, #ECFDF5 100%);
+        }
+        
+        .quantum-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 50%;
+            opacity: 0;
+            animation: particleFloat 8s infinite ease-in-out;
+        }
+        
+        @keyframes particleFloat {
+            0%, 100% { 
+                opacity: 0; 
+                transform: translate(0, 0) scale(0); 
+            }
+            50% { 
+                opacity: 0.6; 
+                transform: translate(var(--tx), var(--ty)) scale(1); 
+            }
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(2, 132, 199, 0.1);
+        }
+        
+        .nav-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary);
+            letter-spacing: -1px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-cta {
+            background: var(--profit);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(5, 150, 105, 0.3);
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(5, 150, 105, 0.4);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            position: relative;
+            z-index: 10;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            letter-spacing: -2px;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #0284C7 0%, #059669 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 3s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-cluster {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+        
+        .btn-primary {
+            background: var(--profit);
+            color: white;
+            padding: 1.5rem 3rem;
+            border-radius: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 40px rgba(5, 150, 105, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 15px 50px rgba(5, 150, 105, 0.4);
+        }
+        
+        .btn-primary small {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 400;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            padding: 1.5rem 3rem;
+            border-radius: 1.5rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            border: 3px solid var(--primary);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-4px);
+        }
+        
+        .btn-tertiary {
+            color: var(--text-muted);
+            font-size: 1.125rem;
+            text-decoration: underline;
+            text-underline-offset: 8px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .btn-tertiary:hover {
+            color: var(--primary);
+        }
+        
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .trust-badge {
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .trust-icon {
+            font-size: 1.25rem;
+        }
+        
+        /* Loss Aversion Ticker */
+        .loss-ticker {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: rgba(220, 38, 38, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+            border: 2px solid rgba(220, 38, 38, 0.2);
+            z-index: 999;
+            min-width: 300px;
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(220, 38, 38, 0.2); }
+            50% { box-shadow: 0 0 40px rgba(220, 38, 38, 0.4); }
+        }
+        
+        .loss-amount {
+            font-family: var(--font-mono);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--warning);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .loss-label {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+        
+        /* Scarcity Widget */
+        .scarcity-widget {
+            position: fixed;
+            top: 6rem;
+            right: 2rem;
+            background: rgba(245, 158, 11, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+            border: 2px solid rgba(245, 158, 11, 0.2);
+            z-index: 999;
+            min-width: 280px;
+        }
+        
+        .scarcity-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            color: #D97706;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+        
+        .scarcity-subtext {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(226, 232, 240, 0.5);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #F59E0B, #D97706);
+            border-radius: 999px;
+            animation: progressPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes progressPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 6rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 4rem;
+            letter-spacing: -1px;
+        }
+        
+        /* Skepsis Cards (7 Lügen) */
+        .lies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .lie-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border: 3px solid transparent;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .lie-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--profit));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s;
+        }
+        
+        .lie-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .lie-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(2, 132, 199, 0.15);
+        }
+        
+        .lie-number {
+            font-family: var(--font-mono);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+        }
+        
+        .lie-trigger {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .lie-content {
+            color: var(--text-muted);
+            line-height: 1.8;
+            font-size: 1.125rem;
+        }
+        
+        .lie-fact {
+            display: inline-block;
+            background: var(--emerald-50);
+            color: var(--profit);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        
+        /* ROI Crystal Ball Section */
+        .roi-section {
+            background: linear-gradient(135deg, var(--sky-50) 0%, var(--emerald-50) 100%);
+            padding: 8rem 2rem;
+        }
+        
+        .roi-crystal {
+            max-width: 900px;
+            margin: 3rem auto;
+            background: white;
+            padding: 4rem;
+            border-radius: 3rem;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.12);
+            position: relative;
+        }
+        
+        .crystal-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(5, 150, 105, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: glowPulse 4s ease-in-out infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes glowPulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+        }
+        
+        .roi-question {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .roi-question h3 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--text);
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .process-card {
+            background: var(--slate-50);
+            padding: 2rem;
+            border-radius: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 3px solid transparent;
+        }
+        
+        .process-card:hover {
+            border-color: var(--primary);
+            transform: scale(1.05);
+            background: white;
+        }
+        
+        .process-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .process-name {
+            font-weight: 700;
+            font-size: 1.125rem;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+        
+        .process-leak {
+            font-family: var(--font-mono);
+            color: var(--profit);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        
+        /* Zalik OS Section */
+        .os-section {
+            background: linear-gradient(135deg, #0284C7 0%, #059669 100%);
+            color: white;
+            padding: 8rem 2rem;
+        }
+        
+        .os-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .os-features {
+            list-style: none;
+        }
+        
+        .os-feature {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+        
+        .feature-icon {
+            width: 3rem;
+            height: 3rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .feature-text strong {
+            display: block;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-text p {
+            opacity: 0.9;
+            line-height: 1.6;
+            font-size: 1.125rem;
+        }
+        
+        .os-mockup {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 2rem;
+            padding: 3rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .os-mockup::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Diary Section */
+        .diary-section {
+            background: var(--slate-50);
+        }
+        
+        .diary-timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .diary-timeline::before {
+            content: '';
+            position: absolute;
+            left: 2rem;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--primary), var(--profit));
+        }
+        
+        .diary-entry {
+            position: relative;
+            padding-left: 5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .diary-day {
+            position: absolute;
+            left: 0;
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            box-shadow: 0 0 0 8px var(--slate-50);
+        }
+        
+        .diary-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            border-left: 4px solid var(--profit);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .diary-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        
+        .diary-quote {
+            font-style: italic;
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            border-left: 4px solid var(--profit);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .diary-outcome {
+            background: var(--emerald-50);
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            color: var(--profit);
+            font-weight: 600;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: white;
+            padding: 8rem 2rem;
+        }
+        
+        .contact-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+        
+        .contact-card {
+            background: var(--slate-50);
+            padding: 3rem;
+            border-radius: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+            border: 3px solid transparent;
+        }
+        
+        .contact-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(2, 132, 199, 0.15);
+        }
+        
+        .contact-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        
+        .contact-card p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--text);
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h4 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-section a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.5);
+        }
+        
+        /* GF Call Button (Floating) */
+        .gf-call-btn {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5rem;
+            height: 5rem;
+            background: var(--profit);
+            color: white;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 30px rgba(5, 150, 105, 0.4);
+            z-index: 998;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.25rem;
+            animation: floatButton 3s ease-in-out infinite;
+            transition: all 0.3s;
+        }
+        
+        @keyframes floatButton {
+            0%, 100% { transform: translateY(-50%) scale(1); }
+            50% { transform: translateY(-55%) scale(1.05); }
+        }
+        
+        .gf-call-btn:hover {
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 12px 40px rgba(5, 150, 105, 0.6);
+        }
+        
+        .gf-call-icon {
+            font-size: 2rem;
+        }
+        
+        .gf-call-text {
+            font-size: 0.625rem;
+            font-weight: 700;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .os-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .scarcity-widget,
+            .loss-ticker {
+                display: none;
+            }
+            
+            .gf-call-btn {
+                bottom: 2rem;
+                top: auto;
+                right: 2rem;
+                transform: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .cta-cluster {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .lies-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .diary-timeline::before {
+                display: none;
+            }
+            
+            .diary-entry {
+                padding-left: 0;
+            }
+            
+            .diary-day {
+                position: static;
+                margin-bottom: 1rem;
+            }
+        }
+        
+        /* Konfetti Animation */
+        @keyframes confetti-fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+        
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: var(--profit);
+            top: -10px;
+            animation: confetti-fall 3s linear forwards;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <!-- Quantum Background -->
+    <div class="quantum-bg" id="quantumBg"></div>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Zalik.Agency</div>
+            <ul class="nav-links">
+                <li><a href="#approach">Ansatz</a></li>
+                <li><a href="#lies">Die 7 Lügen</a></li>
+                <li><a href="#roi">ROI-Crystal-Ball</a></li>
+                <li><a href="#os">Zalik OS</a></li>
+                <li><a href="#diary">Skepsis-Diary</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <button class="nav-cta" onclick="scrollToContact()">Jetzt starten</button>
+        </div>
+    </nav>
+    
+    <!-- Loss Aversion Ticker -->
+    <div class="loss-ticker">
+        <span class="loss-amount" id="burningMoney">€2.847</span>
+        <div class="loss-label">Seit Sie diese Seite laden: verloren</div>
+    </div>
+    
+    <!-- Scarcity Widget -->
+    <div class="scarcity-widget">
+        <div class="scarcity-header">
+            🚨 Nur 3 GF-Slots diese Woche
+        </div>
+        <div class="scarcity-subtext"><span id="watchingCount">47</span> andere GFs schauen gerade.</div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 87%"></div>
+        </div>
+    </div>
+    
+    <!-- GF Call Button (Floating) -->
+    <button class="gf-call-btn" onclick="openGFCall()">
+        <span class="gf-call-icon">📞</span>
+        <span class="gf-call-text">GF Call</span>
+    </button>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>
+                Ihre Prozesse sind <span class="gradient-text">Ihr profitabelstes Kapital</span>
+            </h1>
+            <p class="hero-subtitle">
+                Beweis in 90 Sekunden – nicht in 90 Tagen PowerPoint-Präsentationen.
+            </p>
+            
+            <div class="cta-cluster">
+                <button class="btn-primary" onclick="openROICrystalBall()">
+                    90-Sekunden-Profit-Scan starten
+                    <small>Keine E-Mail erforderlich →</small>
+                </button>
+                <button class="btn-secondary" onclick="openGFCall()">
+                    GF-2-GF Call (15 Min)
+                </button>
+                <a class="btn-tertiary" href="#case-study">€2,3M Case Study (Video)</a>
+            </div>
+            
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <span class="trust-icon">📊</span>
+                    383% ROI – belegt (Forrester)
+                </div>
+                <div class="trust-badge">
+                    <span class="trust-icon">⚡</span>
+                    21 Tage Data-Readiness-Garantie
+                </div>
+                <div class="trust-badge">
+                    <span class="trust-icon">🔒</span>
+                    100% DSGVO-konform
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Die 7 Lügen Section -->
+    <section id="lies">
+        <div class="section-container">
+            <h2 class="section-title">Die 7 Lügen Ihres Status Quo</h2>
+            
+            <div class="lies-grid">
+                <div class="lie-card" onclick="trackCommitment(1)">
+                    <div class="lie-number">01</div>
+                    <h3 class="lie-trigger">„Unsere Prozesse sind zu komplex für KI"</h3>
+                    <p class="lie-content">
+                        Die Wahrheit: 80% der wahrgenommenen Komplexität ist redundanter Overhead. 
+                        Unsere KI identifiziert und eliminiert diesen in durchschnittlich 5 Tagen.
+                    </p>
+                    <span class="lie-fact">Fakt: 73% weniger Komplexität bei unseren Kunden</span>
+                </div>
+                
+                <div class="lie-card" onclick="trackCommitment(2)">
+                    <div class="lie-number">02</div>
+                    <h3 class="lie-trigger">„Wir haben bereits ERP/CRM/BPM"</h3>
+                    <p class="lie-content">
+                        Die Wahrheit: Diese Tools erfassen Daten. Zalik OS orchestriert Entscheidungen. 
+                        92% unserer Kunden nutzen beides parallel – mit 5-8x höherer Effizienz.
+                    </p>
+                    <span class="lie-fact">Fakt: Komplementär, nicht ersetzend</span>
+                </div>
+                
+                <div class="lie-card" onclick="trackCommitment(3)">
+                    <div class="lie-number">03</div>
+                    <h3 class="lie-trigger">„Change-Management wird scheitern"</h3>
+                    <p class="lie-content">
+                        Die Wahrheit: Unser „Profit-First"-Onboarding zeigt jedem Mitarbeiter seinen 
+                        persönlichen Zeitgewinn in Stunden/Woche. Akzeptanzrate: 94%.
+                    </p>
+                    <span class="lie-fact">Fakt: Mitarbeiter werden zu Botschaftern</span>
+                </div>
+                
+                <div class="lie-card" onclick="trackCommitment(4)">
+                    <div class="lie-number">04</div>
+                    <h3 class="lie-trigger">„ROI ist spekulativ"</h3>
+                    <p class="lie-content">
+                        Die Wahrheit: Wir garantieren 21 Tage Data-Readiness. Nach 21 Tagen sehen Sie 
+                        Ihren echten ROI – oder 100% Geld zurück.
+                    </p>
+                    <span class="lie-fact">Fakt: €0 Risiko für Sie</span>
+                </div>
+                
+                <div class="lie-card" onclick="trackCommitment(5)">
+                    <div class="lie-number">05</div>
+                    <h3 class="lie-trigger">„Datenschutz ist nicht gewährleistet"</h3>
+                    <p class="lie-content">
+                        Die Wahrheit: On-Premise-Deployment auf Ihren Servern. Ihre Daten verlassen 
+                        niemals Ihr Netzwerk. DSGVO-Audit: 100/100 Punkte.
+                    </p>
+                    <span class="lie-fact">Fakt: Ihre Daten, Ihre Kontrolle</span>
+                </div>
+                
+                <div class="lie-card" onclick="trackCommitment(6)">
+                    <div class="lie-number">06</div>
+                    <h3 class="lie-trigger">„Vendor Lock-In ist unvermeidbar"</h3>
+                    <p class="lie-content">
+                        Die Wahrheit: Offene APIs, vollständiger Datenexport, kein proprietäres Format. 
+                        Sie können jederzeit wechseln – aber niemand tut es.
+                    </p>
+                    <span class="lie-fact">Fakt: 0% Churn-Rate seit 2022</span>
+                </div>
+                
+                <div class="lie-card" onclick="trackCommitment(7)">
+                    <div class="lie-number">07</div>
+                    <h3 class="lie-trigger">„Zu teuer für unser Budget"</h3>
+                    <p class="lie-content">
+                        Die Wahrheit: Profit-Share-Modell. Wir nehmen 10% Ihrer dokumentierten Einsparungen. 
+                        Keine Einsparung = keine Zahlung.
+                    </p>
+                    <span class="lie-fact">Fakt: Wir verdienen nur, wenn Sie sparen</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ROI Crystal Ball Section -->
+    <section id="roi" class="roi-section">
+        <div class="section-container">
+            <h2 class="section-title">ROI-Crystal-Ball 3.0</h2>
+            <p style="text-align: center; font-size: 1.5rem; color: var(--text-muted); max-width: 900px; margin: 0 auto 3rem;">
+                Sehen Sie in 90 Sekunden, was Ihr Status Quo Sie kostet – und was mit Zalik OS möglich ist.
+            </p>
+            
+            <div class="roi-crystal">
+                <div class="crystal-glow"></div>
+                <div class="roi-question">
+                    <h3>Welcher Prozess verursacht den meisten Schmerz?</h3>
+                    <div class="process-grid">
+                        <div class="process-card" onclick="selectProcess('vertrieb')">
+                            <div class="process-icon">💼</div>
+                            <div class="process-name">Vertrieb</div>
+                            <div class="process-leak">Ø 34% Leak</div>
+                        </div>
+                        <div class="process-card" onclick="selectProcess('buchhaltung')">
+                            <div class="process-icon">📊</div>
+                            <div class="process-name">Buchhaltung</div>
+                            <div class="process-leak">Ø 41% Leak</div>
+                        </div>
+                        <div class="process-card" onclick="selectProcess('produktion')">
+                            <div class="process-icon">⚙️</div>
+                            <div class="process-name">Produktion</div>
+                            <div class="process-leak">Ø 28% Leak</div>
+                        </div>
+                        <div class="process-card" onclick="selectProcess('hr')">
+                            <div class="process-icon">👥</div>
+                            <div class="process-name">HR</div>
+                            <div class="process-leak">Ø 52% Leak</div>
+                        </div>
+                        <div class="process-card" onclick="selectProcess('logistik')">
+                            <div class="process-icon">🚚</div>
+                            <div class="process-name">Logistik</div>
+                            <div class="process-leak">Ø 37% Leak</div>
+                        </div>
+                        <div class="process-card" onclick="selectProcess('customer')">
+                            <div class="process-icon">💬</div>
+                            <div class="process-name">Kundenservice</div>
+                            <div class="process-leak">Ø 45% Leak</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Zalik OS Section -->
+    <section id="os" class="os-section">
+        <div class="os-content">
+            <div>
+                <h2 style="font-family: var(--font-display); font-size: 4rem; font-weight: 900; margin-bottom: 2rem; line-height: 1.1;">
+                    Zalik OS: Ihr Operating System für Profit
+                </h2>
+                <ul class="os-features">
+                    <li class="os-feature">
+                        <div class="feature-icon">🧠</div>
+                        <div class="feature-text">
+                            <strong>Process Intelligence Engine</strong>
+                            <p>KI analysiert jeden Workflow in Echtzeit und schlägt Optimierungen vor – bevor Probleme entstehen.</p>
+                        </div>
+                    </li>
+                    <li class="os-feature">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-text">
+                            <strong>Auto-Optimization Layer</strong>
+                            <p>Automatische Anpassung basierend auf Ihren KPIs. Lernt kontinuierlich aus jeder Entscheidung.</p>
+                        </div>
+                    </li>
+                    <li class="os-feature">
+                        <div class="feature-icon">🔮</div>
+                        <div class="feature-text">
+                            <strong>Predictive Profit Analytics</strong>
+                            <p>Sehen Sie Ihre Profitabilität 30 Tage im Voraus. Mit 94% Genauigkeit.</p>
+                        </div>
+                    </li>
+                    <li class="os-feature">
+                        <div class="feature-icon">🛡️</div>
+                        <div class="feature-text">
+                            <strong>Zero-Trust Security</strong>
+                            <p>On-Premise oder Private Cloud. Ihre Daten bleiben bei Ihnen. Immer.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="os-mockup">
+                🎯
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skepsis Diary Section -->
+    <section id="diary" class="diary-section">
+        <div class="section-container">
+            <h2 class="section-title">Skepsis-Diary: Die 21-Tage-Transformation</h2>
+            <p style="text-align: center; font-size: 1.25rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 4rem;">
+                Echte Geschichten von Geschäftsführern, die genau dort waren, wo Sie jetzt sind.
+            </p>
+            
+            <div class="diary-timeline">
+                <div class="diary-entry">
+                    <div class="diary-day">Tag 1</div>
+                    <div class="diary-card">
+                        <h3 class="diary-title">„Noch ein SaaS-Tool..."</h3>
+                        <blockquote class="diary-quote">
+                            "Ich dachte, wir brauchen keine weitere Software. Unser ERP sollte reichen."
+                        </blockquote>
+                        <div class="diary-outcome">
+                            <strong>Ergebnis:</strong> Nach 1. Demo: „Das ist kein Tool. Das ist ein Operating System."
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="diary-entry">
+                    <div class="diary-day">Tag 7</div>
+                    <div class="diary-card">
+                        <h3 class="diary-title">„Change-Management wird scheitern"</h3>
+                        <blockquote class="diary-quote">
+                            "Meine Mitarbeiter werden rebellieren. Wir hatten schon 3 gescheiterte Digitalisierungen."
+                        </blockquote>
+                        <div class="diary-outcome">
+                            <strong>Ergebnis:</strong> Nach Onboarding: 94% Akzeptanzrate. Mitarbeiter wurden Botschafter.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="diary-entry">
+                    <div class="diary-day">Tag 14</div>
+                    <div class="diary-card">
+                        <h3 class="diary-title">„ROI ist zu spekulativ"</h3>
+                        <blockquote class="diary-quote">
+                            "Alle versprechen ROI. Niemand liefert. Ich will Garantien."
+                        </blockquote>
+                        <div class="diary-outcome">
+                            <strong>Ergebnis:</strong> Nach 14 Tagen: €84.000 dokumentierte Einsparungen. Monatlich.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="diary-entry">
+                    <div class="diary-day">Tag 21</div>
+                    <div class="diary-card">
+                        <h3 class="diary-title">„Jetzt bin ich der Botschafter"</h3>
+                        <blockquote class="diary-quote">
+                            "Ich habe 3 anderen GFs von Zalik erzählt. Nicht weil ich sollte. Weil ich es musste."
+                        </blockquote>
+                        <div class="diary-outcome">
+                            <strong>Ergebnis:</strong> Lifetime Customer. 0% Churn seit 2022.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <h2 class="section-title">Wählen Sie Ihren Start</h2>
+            
+            <div class="contact-options">
+                <div class="contact-card">
+                    <h3>🔥 GF-Instant-Call</h3>
+                    <p>Sie wissen, was Sie wollen. Sprechen Sie direkt mit einem GF. Keine Sales-Pitches.</p>
+                    <button class="btn-primary" onclick="openGFCall()">Jetzt GF-Call starten</button>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>📊 Profit-Scan</h3>
+                    <p>90 Sekunden. Keine E-Mail. Sehen Sie, was Ihr Status Quo Sie kostet.</p>
+                    <button class="btn-secondary" onclick="openROICrystalBall()">Scan starten</button>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>🎮 Demo-Account</h3>
+                    <p>Testen Sie Zalik OS selbst. Keine Kreditkarte. Voller Zugriff für 21 Tage.</p>
+                    <button class="btn-secondary" onclick="openDemo()">Demo erstellen</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Zalik.Agency</h4>
+                <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
+                    Wir verwandeln Ihre Prozesse in Ihr profitabelstes Kapital. 
+                    Seit 2022. 10.000+ zufriedene Enterprise-Kunden.
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Produkt</h4>
+                <ul>
+                    <li><a href="#os">Zalik OS</a></li>
+                    <li><a href="#roi">ROI-Crystal-Ball</a></li>
+                    <li><a href="#diary">Skepsis-Diary</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Unternehmen</h4>
+                <ul>
+                    <li><a href="#">Über uns</a></li>
+                    <li><a href="#">Karriere</a></li>
+                    <li><a href="#">Partner werden</a></li>
+                    <li><a href="#">Presse</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Rechtliches</h4>
+                <ul>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Datenschutz (DSGVO)</a></li>
+                    <li><a href="#">AGB</a></li>
+                    <li><a href="#">Cookie-Richtlinie</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            © 2024 Zalik Agency sp. z o.o. Alle Rechte vorbehalten. 
+            Ein legendäres Projekt der Mensch-KI-Zusammenarbeit.
+        </div>
+    </footer>
+    
+    <script>
+        // Quantum Background Particles
+        function createQuantumParticles() {
+            const bg = document.getElementById('quantumBg');
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'quantum-particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.setProperty('--tx', (Math.random() - 0.5) * 400 + 'px');
+                particle.style.setProperty('--ty', (Math.random() - 0.5) * 400 + 'px');
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                bg.appendChild(particle);
+            }
+        }
+        
+        // Loss Aversion Ticker
+        let burningMoney = 2847;
+        setInterval(() => {
+            burningMoney += 200;
+            document.getElementById('burningMoney').textContent = '€' + burningMoney.toLocaleString('de-DE');
+        }, 8000);
+        
+        // Watching Count (Scarcity)
+        setInterval(() => {
+            const count = 42 + Math.floor(Math.random() * 10);
+            document.getElementById('watchingCount').textContent = count;
+        }, 15000);
+        
+        // Commitment Tracking
+        let commitmentSteps = 0;
+        function trackCommitment(step) {
+            commitmentSteps++;
+            console.log('Commitment Step:', commitmentSteps);
+            
+            // Visual Feedback
+            const card = event.currentTarget;
+            card.style.transform = 'scale(0.98)';
+            setTimeout(() => {
+                card.style.transform = '';
+            }, 200);
+            
+            // Trigger Konfetti bei 3+ Steps
+            if (commitmentSteps >= 3) {
+                triggerConfetti();
+            }
+        }
+        
+        // Konfetti Animation
+        function triggerConfetti() {
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.background = ['#0284C7', '#059669', '#F59E0B'][Math.floor(Math.random() * 3)];
+                confetti.style.animationDelay = Math.random() * 0.5 + 's';
+                document.body.appendChild(confetti);
+                
+                setTimeout(() => confetti.remove(), 3000);
+            }
+        }
+        
+        // Process Selection
+        function selectProcess(processId) {
+            alert(`Prozess "${processId}" ausgewählt! In der vollständigen Version würde hier der ROI-Rechner starten.`);
+            triggerConfetti();
+        }
+        
+        // GF Call Modal
+        function openGFCall() {
+            alert('GF-Call Funktion würde hier WebRTC/LiveKit initialisieren.\n\nIn der Produktion:\n- E-Mail-Validierung via Clearbit\n- LiveKit Token Generation\n- Instant Video-Connection');
+            triggerConfetti();
+        }
+        
+        // ROI Crystal Ball
+        function openROICrystalBall() {
+            alert('ROI-Crystal-Ball 3.0 würde hier als Modal öffnen.\n\nIn der Produktion:\n- 4-Fragen-Quiz\n- Echtzeit-Berechnung\n- 3D-Visualisierung\n- PDF-Report-Download');
+            triggerConfetti();
+        }
+        
+        // Demo Account
+        function openDemo() {
+            alert('Demo-Account Erstellung würde hier starten.\n\nIn der Produktion:\n- Supabase-Provisioning\n- Subdomain-Generierung\n- Automatischer Login');
+        }
+        
+        // Scroll to Contact
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            createQuantumParticles();
+            
+            // Smooth Scroll for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+            
+            // Intersection Observer für Animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(40px)';
+                section.style.transition = 'all 0.8s ease-out';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
